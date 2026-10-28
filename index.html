@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio | William Wong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">MyPortfolio</a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <button id="themeToggle" class="theme-btn"
+                    aria-label="Toggle color theme">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="greeting">HELLO, WELCOME TO MY PORTFOLIO</p>
+                <h1>Hi, I'm <span>William Wong</span></h1>
+                <h2>A Student & Aspiring Developer</h2>
+                <p>
+                    I enjoy learning new technologies, solving problems
+                    and creating useful digital experiences.
+                </p>
+
+                <a href="#projects" class="btn">View My Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="williampersonalphoto.jpg" alt="My profile photo">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+             <h2 class="section-title">About Me</h2>
+             
+            <div class="about-card">
+                <p>
+                    My name is William Wong Du Sheng. I am currently studying
+                    <b>Bachelor in Computer Science (Multimedia Computing) with Honours</b> in <b>University Malaysia Sarawak (UNIMAS)</b>.
+                    I'm interested in Technology, UI/UX Design and Web Development.
+                </p>
+                <p>
+                    I hope to improve my <b>technical skills</b>, <b>gain
+                    practical experience</b>, <b>develop projects
+                    that solve real-world problems</b> and <b>improve my communication skills during teamwork</b>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Java</div>
+                <div class="skill-card">SQL</div>
+                <div class="skill-card">C++</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title">My Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="personalportfolio.png" alt="Personal Portfolio Screenshot" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio</h3>
+                        <p>A website introducing my background, skills and achievements.</p>
+                        <p class="project-tech">HTML · CSS · JavaScript</p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="JavaProject.png" alt="Java Project Screenshot" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>Java Project</h3>
+                        <p>A Java project demonstrating programming, object-oriented design and problem-solving.</p>
+                        <p class="project-tech">Java · OOP</p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="databaseproject.png" alt="Database Project Screenshot" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>Database Project</h3>
+                        <p>A database project involving data modelling, relational tables and SQL queries.</p>
+                        <p class="project-tech">SQL · Database Design</p>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="C++Project.png" alt="C++ Project Screenshot" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>C++ Project</h3>
+                        <p>A C++ project demonstrating core programming concepts, data structures and efficient algorithms.</p>
+                        <p class="project-tech">C++ · Object-Oriented Programming</p>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="UI/UXDesign.png" alt="UI/UX Design Project Screenshot" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>UI/UX Design Project</h3>
+                        <p>A mobile application interface design focused on user-centered design principles.</p>
+                        <p class="project-tech">Figma · Prototyping</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-card">
+                <p>Feel free to contact with me!</p>
+
+                <p>
+                    Email:
+                    <a href="mailto:dswilliamwong@gmail.com" id="emailLink">
+                       dswilliamwong@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    GitHub:
+                    <a href="https://github.com/williamwong-design"
+                       target="_blank" rel="noopener noreferrer">
+                       https://github.com/williamwong-design
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> William Wong. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+
+    <!-- Modal for full image viewing -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgModalSrc" alt="Enlarged preview">
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
