@@ -63,19 +63,24 @@ const sections = document.querySelectorAll("section");
 const navItems = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (window.scrollY >= (sectionTop - 150)) {
-            current = section.getAttribute("id");
-        }
-    });
+    let current = ""; 
+    const isAtBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 30;
+
+    if (isAtBottom) {
+        current = sections[sections.length - 1].getAttribute("id");
+    } else {
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= (sectionTop - 180)) {
+                current = section.getAttribute("id");
+            }
+        });
+    }
 
     navItems.forEach(item => {
+        item.classList.remove("active"); 
         if (item.getAttribute("href") === `#${current}`) {
-            item.style.color = "var(--primary)";
-        } else {
-            item.style.color = "var(--text)";
+            item.classList.add("active"); 
         }
     });
 });
