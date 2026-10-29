@@ -33,10 +33,11 @@ a {
     text-decoration: none;
 }
 
+
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
     width: 100%;
@@ -68,10 +69,30 @@ header {
 .nav-links a {
     color: var(--text);
     font-size: 0.95rem;
+    transition: color 0.2s;
+    position: relative; 
+    padding-bottom: 4px;
 }
 
 .nav-links a:hover {
     color: var(--primary);
+}
+
+
+.nav-links a.active {
+    color: var(--primary) !important;
+    font-weight: bold;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    border-radius: 2px;
 }
 
 .theme-btn,
@@ -158,12 +179,12 @@ header {
 
 /* Personal profile photo section */
 .hero-image img {
-    width: 320px;          /* Enlarge photo display width */
+    width: 320px;          
     max-width: 100%;
-    height: 400px;         /* Set vertical height for full ID photo display */
+    height: 400px;         
     object-fit: cover;     
-    object-position: top center; /* Focus on head and face to prevent cropping important details */
-    border-radius: 16px;   /* Rounded rectangle style for better facial visibility */
+    object-position: top center; 
+    border-radius: 16px;   
     border: 7px solid var(--surface);
     box-shadow: 0 10px 35px #6865e825;
 }
@@ -212,10 +233,10 @@ header {
     transform: translateY(-5px);
 }
 
-/* Projects layout: larger cards and images, high-definition text display, stable positioning */
+/* Projects layout */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive large grid */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 28px;
     width: 100%;
 }
@@ -237,7 +258,7 @@ header {
 
 .project-img-wrapper {
     width: 100%;
-    height: 240px; /* Increase image container height for clear text visibility */
+    height: 240px;
     background: #f0f0f8;
     overflow: hidden;
     position: relative;
@@ -247,13 +268,13 @@ header {
 .project-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensure full display of all details and text within the image */
-    padding: 8px; /* Add slight padding for a balanced layout */
+    object-fit: contain;
+    padding: 8px;
     transition: transform 0.3s ease;
 }
 
 .project-card:hover .project-img {
-    transform: scale(1.04); /* Slight zoom on hover */
+    transform: scale(1.04);
 }
 
 .project-content {
@@ -275,7 +296,7 @@ header {
 
 .project-tech {
     font-size: 0.85rem;
-    margin-top: auto; /* Align to bottom */
+    margin-top: auto;
     padding-top: 15px;
     color: var(--primary) !important;
     font-weight: bold;
@@ -321,7 +342,7 @@ footer {
     background: var(--primary);
     color: #ffffff;
     border: none;
-    font-size: 1.2rem;   /* Adjust arrow size */
+    font-size: 1.2rem;   
     font-weight: bold;
     cursor: pointer;
 }
@@ -335,7 +356,7 @@ footer {
     transform: translateY(-3px);
 }
 
-/* Image modal popup style for full-screen preview */
+/* Image modal popup style */
 .image-modal {
     display: none;
     position: fixed;
@@ -421,7 +442,7 @@ body.dark .project-img-wrapper {
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; /* Mobile: single column layout, smooth scrolling */
+        grid-template-columns: 1fr; 
     }
 
     .project-img-wrapper {
